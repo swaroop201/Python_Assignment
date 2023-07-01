@@ -1,0 +1,35 @@
+1)
+res=set(list(x for x in range (1,1000) for y in range (2,10) if x%y==0))
+print(res)
+
+2)res=[x+6 for x in range(1,6) ]
+print(res)
+
+3)ls=[1,2,3,4,5,6,7]
+res={x:x**3 for x in ls if x%2!=0}
+print(res)
+
+4)
+state=['gujarat','maharashtra','pakisthan']
+capital=['gandhinagar','jaipur','mumbai']
+res={state[i]:capital[i] for i in range(len(state))}
+print(res)
+
+5)
+tp=[[1,2,3,4],[4,5,6,8]]
+rez = [[tp[j][i] for j in range(len(tp))] for i in range(len(tp[0]))]
+print(rez)
+
+6)
+ip='2459a09b'
+ip=list(ip)
+for i in ip:
+    if int(i) in range(10):
+        print(i)
+    
+7) ip=['ch','dh','ep','chb','tdb']
+res=[x for x in ip if len(x)>2 and x.endswith('b')]
+print(res)    
+8)ls=['hello','analytics','vidhta']
+res=[x[::-1] for x in ls]
+print(res)

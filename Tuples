@@ -1,0 +1,70 @@
+1:
+test_list=[(4,5),(4,),(8,6,7),(1,),(3,4,6,7)]
+k=2
+for i in test_list:
+    if len(i) != k:
+        print(i)
+(4,)
+(8, 6, 7)
+(1,)
+(3, 4, 6, 7)
+
+2:tu=(1,3,5,2,3,5,1,3)
+print(set(tu))
+{1, 2, 3, 5}
+
+3:test=([5],[7],[6],[8])
+tup=[]
+for i in test:
+    if type(i)== list:
+        for j in i:
+            tup.append(j)
+    else:
+        tup.append(i)
+        
+print(tuple(tup))
+(5, 7, 6, 8)
+
+4:
+tu=(1,5,7,(4,6),10)
+ls=[]
+for i in tu:
+    if type(i) == tuple:
+        continue
+    else:
+        ls.append(i)
+print(tuple(ls))
+(1, 5, 7, 10)
+
+5:
+def numb(lst):
+    sum=0
+    for i in lst:
+        sum=sum+i
+    return sum
+tp=(1,1,0,1,0,0,1)
+tp1=list(tp)
+tp1=tp1[::-1]
+print(tp1)
+ls=[]
+for i in range(0,len(tp1)):
+    if tp1[i]==1:
+        ls.append(pow(2,i))
+    else:
+        continue
+decnum=numb(ls)
+print(decnum)
+    
+    
+[1, 0, 0, 1, 0, 1, 1]
+105
+6)
+list1 = [(3, 4, 6, 723), (1, 2), (134,234,34)]
+
+print("The list is : ")
+print(list1)
+
+my_result = sorted(list1, key = lambda tup : sum([len(str(ele)) for ele in tup ]))
+
+print("The sorted tuples are ")
+print(my_result)

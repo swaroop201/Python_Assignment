@@ -1,0 +1,93 @@
+1:l = [2, 4, 1, 5, 6, 7]
+
+total = 0
+for i in l:
+    total += i
+    
+print(total)
+
+
+2:l = [2, 4, 1, 5, 6, 7]
+
+mul = 1
+for i in l:
+    mul *= i
+    
+print(mul)
+
+
+3:l = [2, 0, 1, 1235, 6, -7123]
+
+minimum = l[0]
+for i in l:
+    if i < minimum:
+        minimum = i
+        
+print(minimum)
+
+4:l = [2, 0, 1, 1235, 6, -7123]
+
+maximum = l[0]
+for i in l:
+    if i > maximum:
+        maximum = i
+        
+print(maximum)
+
+
+5:l = [2, 0, 1, 1235, 6, -7123]
+l.sort(reverse=True)
+print("Second largest number:", l[1])
+
+
+6:def findLarge(lst, n):
+    
+    lst.sort(reverse = True)
+    return lst[n-1]
+# 2nd Largest Element
+
+l = [2, 0, 1, 1235, 6, -7123]
+findLarge(l, 2)
+
+
+7:l = [2, 0, 1, 1235, 6, -7123, 21, 54, 12, -23, -42]
+
+[ i for i in l if i%2 == 0]
+
+8:l = [2, 0, 1, 1235, 6, -7123, 21, 54, 12, -23, -42]
+
+[ i for i in l if i%2 == 1]
+
+
+9:
+l = [[], 12, 31, [1,2, -23] , [1], [], [123.23], [], 2, 321]
+
+result = []
+for i in l:
+    if type(i) == list:
+        if len(i) != 0:
+            result.append(i)
+    else:
+        result.append(i)
+
+result
+
+
+10:list1 = [2,1, 31, 3, 412, 3, 4667, [2,3,1]]
+list2 = []
+
+for i in list1:
+    list2.append(i)
+    
+print(list2)
+
+11:l = [1,1,1, 3, 4, 1, 7, 8, 6,6,2,1]
+
+def occurrences(lst, element):
+    count = 0
+    for i in lst:
+        if i == element:
+            count += 1
+            
+    return count
+occurrences(l, 1)

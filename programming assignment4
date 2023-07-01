@@ -1,0 +1,65 @@
+1:
+def facto(n):
+    if n== 1 or n== 0 :
+        return 1
+    else:
+        return n * facto(n-1)
+            
+n = 5
+print(facto(5))
+
+2:num = int(input("Enter a number: "))
+
+for i in range(1, 21):
+    print("{} x {} = {}".format(num, i, num*i))
+    
+
+3:fibo_length = int(input("Enter a length: "))
+
+a = 0
+b = 1
+print(a, end = ' ')
+print(b, end = ' ')
+while(fibo_length-2 > 0):
+    nt = a + b
+    print(nt, end = ' ')
+    a = b
+    b = nt
+    
+    fibo_length -= 1
+    
+4:import math
+def fibo_check(num):
+    l = len(str(num))  ## l = number of digits of number
+    sum1 = 0 
+    temp_num = num
+    while(num > 0):
+        d = num % 10
+        sum1 += int(math.pow(d, l))
+        num = num // 10
+
+    if(sum1 == int(temp_num)):
+        return 1
+    else:
+        return 0
+num = int(input("Enter a number: "))
+
+if(fibo_check(num)):
+    print("{} is an armstrong number".format(num))
+else:
+    print("{} is not an armstrong number".format(num))
+    
+5:low = int(input("Enter the lower value of range: "))
+high = int(input("Enter the higher value of range: "))
+
+print("\nFrom {} to {} following are the Armstrong Number:".format(low, high), end='\n')
+for i in range(low, high+1):
+    
+    if(fibo_check(i)):
+        print(i, end = ' ')
+    
+ 6:nat_nam = 100
+
+sum_of_nat_num = (nat_nam * (nat_nam +1))//2
+
+print("sum of {} natural numbers is : ".format(nat_nam),sum_of_nat_num)

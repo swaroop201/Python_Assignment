@@ -1,0 +1,76 @@
+1:a = int(input("Enter first number : "))
+b = int(input("Enter second number : "))
+
+c1 = []
+c2 = []
+
+for i in range(1,a):
+    if a % i == 0:
+        c1.append(i)
+
+for i in range(1,b):
+    if b % i == 0:
+        c1.append(i)
+        
+
+#To find lcm of 2 numbers
+lcm_result = 1 
+for i in c1:
+    lcm_result = lcm_result * i
+print("LCM of 2 numbers is : ",lcm_result)
+
+2:def hcf(a, b):
+    
+    low = a if a < b else b
+    
+    for i in range(1, low+1):
+        if (a%i==0) and (b%i==0):
+            hcf = i
+            
+    return hcf
+a = 4
+b = 6
+
+hcf(a, b)
+
+3:def conversion(num):
+    print("Binary:      ", bin(num))
+    print("Octal:       ", oct(num))
+    print("Hexadecimal: ", hex(num))
+conversion(7)
+Binary:       0b111
+Octal:        0o7
+Hexadecimal:  0x7
+conversion(369)
+Binary:       0b101110001
+Octal:        0o561
+Hexadecimal:  0x171
+
+4:try:
+    char = input("Enter a character: ")
+    ASCII = ord(char)
+    print("ASCII value of {} is {}".format(char, ASCII))
+except Exception as e:
+    print(e)
+    
+5:a = int(input("Enter first number : "))
+b = int(input("Enter second number : "))
+
+operation = input("Type of operation is : ")
+
+if operation == '+':
+    print(a + b)
+elif operation == '-' :
+    print(a - b)
+elif operation == '*':
+    print(a * b)
+
+elif operation == '/':
+    print(a / b)
+    
+else :
+    print('Not a valid operator')
+Enter first number : 22
+Enter second number : 2
+Type of operation is : +
+24

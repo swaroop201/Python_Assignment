@@ -1,0 +1,92 @@
+1:import math
+
+def calculate_formula(args):
+    c = 50
+    h = 30
+    result = []
+    for d in args:
+        result.append(int(math.sqrt((2*c*int(d))/h)))
+    print(result)
+    
+
+inp = list(input("Enter comma separated numbers input: ").split(','))
+calculate_formula(inp)
+
+2:x = int(input("Enter X value: "))
+y = int(input("Enter Y value: "))
+matrix = []
+for i in range(x):
+    row = []
+    for j in range(y):
+        row.append(i*j)
+    matrix.append(row)
+print(matrix)
+
+3:words = list(input("Enter comma seperated words: ").split(','))
+words.sort() 
+print(','.join(words))
+
+
+4:words = list(set(input("Enter comma seperated words: ").split(' ')))
+words.sort() 
+print(' '.join(words))
+
+
+5:
+words = input("Enter a sentence: ")
+letters = 0
+digits = 0
+for c in words:
+    if (ord(c) >= ord('a') and ord(c) <= ord('z')) or (ord(c) >= ord('A') and ord(c) <= ord('Z')):
+        letters += 1
+    elif ord(c) >= ord('0') and ord(c) <= ord('9'):
+        digits += 1
+print("LETTERS {}".format(letters))
+print("DIGITS {}".format(digits))
+
+6:
+def check_smallcase(password):
+    check = False
+    for p in password:
+        if ord(p) >= ord('a') and ord(p) <= ord('z'):
+            check = True
+            break
+    return check
+
+def check_uppercase(password):
+    check = False
+    for p in password:
+        if ord(p) >= ord('A') and ord(p) <= ord('Z'):
+            check = True
+            break
+    return check
+
+def check_digit(password):
+    check = False
+    for p in password:
+        if ord(p) >= ord('1') and ord(p) <= ord('9'):
+            check = True
+            break
+    return check
+
+def check_specialchars(password):
+    check = False
+    specials = "!@#$%^&*()_+=->;,:/?`"
+    for p in password:
+        if p in specials:
+            check = True
+            break
+    return check
+
+def check_minlength(password):
+    return len(password) >= 6
+
+def check_maxlength(password):
+    return len(password) <= 12
+
+passwords = list(set(input("Enter comma seperated passwords: ").split(',')))
+valid_passwords = []
+for password in passwords:
+    if check_smallcase(password) and check_uppercase(password) and check_digit(password) and check_specialchars(password) and check_minlength(password) and check_maxlength(password):
+        valid_passwords.append(password)
+print(','.join(valid_passwords))

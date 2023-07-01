@@ -1,0 +1,85 @@
+1:class Task1:
+    def gen(self, n):
+        for i in range(n+1):
+            if i%7 == 0:
+                yield i
+nums = Task1()
+[i for i in nums.gen(100)]
+
+
+2:def task2(string: str):
+    
+    string_list = string.split(' ')
+    out_dict = {}
+    
+    for s in string_list:
+        if s in out_dict.keys():
+            out_dict[s] += 1
+        else:
+            out_dict[s] = 1
+            
+    for k, v in sorted(out_dict.items()):
+        print(k, ':', v)
+        
+        
+3:class Person:
+    def getGender(self):
+        pass
+    
+class Male(Person):
+    def getGender(self):
+        print('Male')
+        
+class Female(Person):
+    def getGender(self):
+        print('Female')
+male = Male()
+female= Female()
+male.getGender()
+female.getGender()
+
+
+4:subject=["I", "You"]
+verb=["Play", "Love"]
+obj=["Hockey","Football"]
+
+sentence_list = []
+
+for i in subject:
+    for j in verb:
+        for k in obj:
+            sentence_list.append(i + " " + j + " " + k)
+            
+for sentence in sentence_list:
+    print(sentence)
+    
+    
+ 5:import zlib
+
+string = 'hello world!hello world!hello world!hello world!'
+
+compress_string = zlib.compress(bytes(s, 'utf-8'))
+
+print(f"Compressed string is: {compress_string}")
+print(f"Decompressed string is: {zlib.decompress(compress_string)}")
+
+
+6:def binarySearch(list1, n):  
+    
+    
+    low = 0  
+    high = len(list1) - 1  
+    mid = 0  
+  
+    while low <= high:  
+        mid = (high + low) // 2  
+        if list1[mid] < n:  
+            low = mid + 1  
+        elif list1[mid] > n:  
+            high = mid - 1  
+        else:  
+            return mid  
+    return -1
+sorted_list = [1, 4, 5, 12, 54, 678, 1235]
+
+binarySearch(sorted_list, 54)

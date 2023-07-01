@@ -1,0 +1,66 @@
+1)def checkPattern(string, pattern):
+	dic = {}
+	pattern_len = len(pattern)
+ 
+	for c in pattern:
+		dic[c] = 1
+		print(c)
+ 
+	onlyPatternChar = ''
+	for c in string:
+		if c in dic:
+			# Empty string
+			if len(onlyPatternChar) == 0:
+				onlyPatternChar += c
+				print(onlyPatternChar)
+			else:
+				if onlyPatternChar[-1] != c:
+					onlyPatternChar += c
+					print(onlyPatternChar)
+ 
+	return (True if onlyPatternChar == pattern else False)
+ 
+res=checkPattern('engineers rock', 'er')
+print(res)
+2)
+test_dict={'Gfg':4,'best':9}
+test_list=[8,2]
+nst={}
+for v,k in zip(test_dict.items(),test_list):
+    nst[k]=dict([v])
+print(nst)
+3)
+test_dict={'c':[3],'b':[12,10],'a':[19,4]}
+sortkey={}
+for k,v in sorted(test_dict.items()):
+    sortvals=sorted(test_dict[k])
+    print(k,sortvals)
+        
+4)from collections import Counter
+sent='Python is great and java is also great'
+sent=sent.split()
+sent=Counter(sent)
+for k,v in sent.items():
+    set(k)
+    print(k)
+6)
+   from collections import Counter
+  
+def maxAnagramSize(input):
+  
+    input = input.split(" ")
+  
+
+    for i in range(0,len(input)):
+         input[i]=''.join(sorted(input[i]))
+         print(input[i])
+  
+    freqDict = Counter(input)
+  
+
+    print (max(freqDict.values()))
+  
+
+input = 'ant magenta magnate tan gnamate'
+res=maxAnagramSize(input)
+print(res) 

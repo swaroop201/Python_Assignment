@@ -1,0 +1,75 @@
+1:
+inp=input("enter the string:")
+from collections import Counter
+dict=Counter(inp)
+import string
+ls=list(dict.keys())
+alpha= [letter for letter in string.ascii_lowercase]
+for i in alpha[:]:
+    if i not in ls:
+        print(i)
+2:
+st='abc'
+n=len(st)
+print(n*(n+1)/2)
+
+3:
+alpha=26
+def uplowsort(data):
+    n=len(data)
+    lcount=[0 for i in range(alpha)]
+    ucount=[0 for i in range(alpha)]
+    data=list(data)
+    for i in range(n):
+        if(data[i].isupper()):
+            ucount[ord(data[i])-ord('A')]+=1
+        else:
+            lcount[ord(data[i])-ord('a')]+=1
+    i=0
+    j=0
+    k=0
+    while k<n:
+        while(i<alpha and ucount[i]==0):
+              i=i+1
+        if(i<alpha):
+            data[k]=chr(ord('A')+i)
+            k=k+1
+            ucount[i]-=1
+        while(j<alpha and lcount[j]==0):
+            j=j+1
+        if(j<alpha):
+            data[k]=chr(ord('a')+j)
+            k=k+1
+            lcount[j]-=1
+    print("".join(data))
+word='bAwutndekWEdkd'
+uplowsort(word)
+        
+4:
+inp=input("enter the string:")
+inp1=inp.split(sep=',')
+unique=set(inp1)
+print(sorted(unique))
+
+5:
+inp=input("enter the string:")
+from collections import Counter
+inp=dict(Counter(inp))
+print(inp)
+6:
+inp=input("enter the string:")
+from collections import Counter
+dict=Counter(inp)
+print(dict)
+vals=sorted(dict.keys())
+min=1
+for k,v in dict.items():
+    if v <= min:
+        print(k)
+7:
+inp=input("enter the string:")
+from collections import Counter
+dict=Counter(inp)
+for k,v in dict.items():
+    if v%2 != 0:
+        print(k)

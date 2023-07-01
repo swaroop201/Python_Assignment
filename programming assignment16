@@ -1,0 +1,47 @@
+1: def stutter(word:str):
+    print(f"{word[:2]}... {word[:2]}... {word}?")
+    
+stutter('incredible') 
+stutter('enthusiastic') 
+stutter('outstanding') 
+
+
+2:
+def radians_to_degrees(rads):
+    return round(57.295779513 * rads, 1)
+
+print(radians_to_degrees(1))
+print(radians_to_degrees(20))
+print(radians_to_degrees(50))
+
+
+3:
+def is_curzon(n):
+    
+    if (1 + 2 ** n) % (1 + 2*n) == 0:
+        return True
+    
+    return False
+
+print(is_curzon(5)) # True
+print(is_curzon(10)) # False
+print(is_curzon(14)) # True
+
+
+4:import math
+
+def area_of_hexagon(length):
+    area =  3 * math.sqrt(3) * 0.5 * length * length
+    return round(area, 1)
+
+print(area_of_hexagon(1))
+print(area_of_hexagon(2))
+print(area_of_hexagon(3))
+
+
+def binary(n):
+    return "{0:b}".format(int(n))
+
+print(binary(1))
+print(binary(5))
+print(binary(10))

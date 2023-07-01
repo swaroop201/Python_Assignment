@@ -1,0 +1,31 @@
+1)
+number=int(input("Enter the value of n:"))
+d=int(input("Enter the value of d:"))
+
+try:
+    q=number/d
+    print("Quotient:",q)
+except ZeroDivisionError:
+    print("ZeroDivisionError has occured!")
+   
+2)
+a = 10
+inp_dict = {'Revanth' : 10, 'Rahul' : 35, 'Hrmanth' : 70}
+arr_list = [1,28,95,78]
+
+try:
+	print("Before Core Logic")
+	result = a/0
+	get_amit = inp_dict['kohli']
+	tenth_element = arr_list[34]
+	print("After Core Logic")
+except ZeroDivisionError as err:
+	print("Failed Execution - ",str(err))
+except KeyError as err:
+	print("Failed Execution - ",str(err))
+except IndexError as err:
+	print("Failed Execution - ",str(err))
+else:
+	print("If there is no exception the this code block will be executed")
+finally:
+	print("This block will always execute doesn't matter exception occured or not")

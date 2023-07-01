@@ -1,0 +1,45 @@
+1)
+ls1=[1,2,3]
+ls2=[4,5,6]
+ls3=[7,8,9]
+print(list(map(lambda x,y,z:x+y+z,ls1,ls2,ls3)))
+
+2)
+ls=[('red','pink'),('white','black'),('orange','green')]
+print(list(map(' '.join,ls)))
+
+3)
+ol=[6,5,3,9]
+nl=[0,1,7,7]
+print(list(map(lambda x,y:(x+y,x-y),ol,nl)))
+
+4)
+fibonacci = lambda number: number if number <= 1 else fibonacci(number - 1) + fibonacci(number - 2);
+listOfFibonacciNumbers = list(map(fibonacci, range(0, 5, 1)));
+print(listOfFibonacciNumbers);
+
+6)
+ol1=['php','w3r','python','java','aaa','abcd']
+res=list(filter(lambda x: (x==''.join(reversed(x))),ol1))
+print(res)
+
+
+7)
+def max_len(ol):
+    max_length=max(len(x) for x in ol)
+    max_list=max(ol,key=lambda i:len(i))
+    return(max_length,max_list)
+def min_len(ol):
+    min_length=min(len(x) for x in ol)
+    min_list=min(ol,key=lambda i:len(i))
+    return (min_length,min_list)
+
+ol=[[0],[1,3],[5,7],[9,11],[13,15,17]]
+print(ol)
+print(max_len(ol))
+print(min_len(ol))
+
+8)
+ol=[1,2,3,4,5,6,7]
+re=list(map(lambda x:x*3,ol))
+print(re)

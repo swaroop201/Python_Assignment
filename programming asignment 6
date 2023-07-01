@@ -1,0 +1,49 @@
+1:def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+n = int(input("Enter the number of terms to display in the Fibonacci sequence: "))
+
+print("Fibonacci sequence:")
+for i in range(n):
+    print(fibonacci(i), end=", ")
+    
+ 2:def fact(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n*fact(n-1)
+        
+3:def calculate_bmi(weight, height):
+    return weight / (height**2)
+
+weight = float(input("Enter your weight in kilograms: "))
+height = float(input("Enter your height in meters: "))
+
+bmi = calculate_bmi(weight, height)
+print("Your Body Mass Index (BMI) is", bmi)
+Enter your weight in kilograms: 70
+Enter your height in meters: 1.6764
+Your Body Mass Index (BMI) is 24.908222451890268
+bmi(1.8, 70)
+4:
+import math
+
+def natural_logarithm(x):
+    return math.log(x)
+
+x = float(input("Enter a number: "))
+print("The natural logarithm of", x, "is", natural_logarithm(x))
+
+5:def cube_sum(n):
+    sum = 0
+    for i in range(1, n + 1):
+        sum += i**3
+    return sum
+
+n = int(input("Enter a number: "))
+print("Sum of cubes of the first", n, "natural numbers is:", cube_sum(n))
